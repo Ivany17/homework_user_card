@@ -1,0 +1,134 @@
+:root {
+    --text-color: #868686;
+    --attention-color: #adb0b2;
+    --button-color: rgb(245, 241, 10);
+    font-size: 20px;
+}
+
+.superUser {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.userCard {
+    min-height: 30vh;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: sans-serif;
+    position: relative;
+    box-shadow: 0px 0px 10px #777,  
+    0 -10px 0 -5px #eee,
+    0 -10px 1px -4px rgba(0, 0, 0, 0.15),
+    0 -20px 0 -10px #eee,
+    0 -20px 1px -9px rgba(0, 0, 0, 0.15);
+}
+
+.userCard:after {
+    content: "+";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;
+    position: absolute;
+    right: -25px;
+    top: calc(50% - 25px); 
+}
+
+.photoUser {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
+}
+
+.userInfo {
+    margin: auto;
+    margin-left: 10%;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.userPersonalInfo {
+    margin-bottom: 10px;
+}
+
+.userName {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.email {
+    margin-top: 5px;
+}
+.userStatusContainer {
+    display: flex;
+}
+
+.userStatus {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9;
+    margin-top: 10px;
+}
+
+@media (max-width: 450px) {
+    .userCard {
+      flex-direction: column;
+    }
+    .imageWrapper {
+      width: 100%;
+    }
+    .userInfo {
+      margin: 0;
+      padding-left: 1em;
+    }
+    .userCard:after{
+      display: none;
+    }
+    .button{
+      display: none;
+    }
+    .userName{
+      margin-top:15px ;
+    }
+    .userStatus{
+      margin-bottom: 15px;
+    }
+
+    .photoUser {
+        border-radius: 0;
+    }
+}
+
+.button {
+    margin-bottom: 150px;
+    margin-right: 10px;
+}
+  
+.pro { 
+    height: 25px;
+    border: none;
+    border-radius: 41%;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: rgba(202, 200, 200, 0.582);
+    text-transform: uppercase;
+}
+  
+.followers {
+    font-size: 20px;
+    padding-right: 30px;
+    margin-top: 5px;
+}
